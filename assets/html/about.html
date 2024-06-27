@@ -24,7 +24,9 @@
   <link rel="stylesheet" href="./assets/css/MenuClick.css">
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="../js/script.js" defer></script>
+  <script src="../js/rateUsModal.js" defer></script>
+  <script src="../js/script.js"></script>
+  
   <script src="../js/scroll-reveal.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -288,6 +290,28 @@
 </head>
 
 <body>
+  <!-- Rate Us Modal Pop up -->
+  <div class="rate-us-modal-wrapper">
+    <div class="rate-us-modal">
+      <a onclick="closeRateUsModal()" class="home_button"></a>
+      <h1 class="rating_heading">Rate Us</h1>
+      <div class="star_rating">
+        <p style="font-weight: 600; color: #A30F17; ">How was your experience?</p>
+        <div class= "stars">
+        <button id= "rate-1" class="star">&#9734;</button>
+        <button id= "rate-2" class="star">&#9734;</button>
+        <button id= "rate-3" class="star">&#9734;</button>
+        <button id= "rate-4" class="star">&#9734;</button>
+        <button id= "rate-5" class="star">&#9734;</button>
+      </div>
+        <p class="current_rating"> 0 of 5</p>
+      </div>
+      <button id="submit_rating" class="submit_button">Submit Rating</button>
+      <p class="thank_you_message">Thank you for rating us!</p>
+    </div>
+  </div>
+
+  <script src="./assets/js/rateUsModal.js" defer></script>
 
 
   <header class="header header-anim" data-header>
@@ -328,7 +352,7 @@
             </li>
 
             <li class="navbar-item">
-              <a href="rate.html" onclick="openRateUsModal(); return false;" class="navbar-link">Rate Us</a>
+              <a href="#rate-us-modal" onclick="openRateUsModal(); return false;" class="navbar-link">Rate Us</a></li>
             </li>
             <li class="navbar-item" id="logout-r">
               <a href="../html/login.html" class="navbar-link">Login/Signup</a>
